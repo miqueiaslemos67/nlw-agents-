@@ -1,12 +1,27 @@
 services:
-  nlw-agents-pg:
-    image: pgvector/pgvector:pg17
+  db:
+    image: pgvector/pgvector:pg17   # <= com pgvector embutido
     environment:
-      POSTGRES_USER: docker
-      POSTGRES_PASSWORD: docker
-      POSTGRES_DB: agents
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: nlw_agents
     ports:
       - "5432:5432"
-
     volumes:
-      - ./docker/setup.sql:/docker-entrypoint-initdb.d/setup.sql
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
+
+# services:
+#   nlw-agents-pg:
+#     image: pgvector/pgvector:pg17
+#     environment:
+#       POSTGRES_USER: docker
+#       POSTGRES_PASSWORD: docker
+#       POSTGRES_DB: agents
+#     ports:
+#       - "5432:5432"
+
+#     volumes:
+#       - ./docker/setup.sql:/docker-entrypoint-initdb.d/setup.sql

@@ -15,6 +15,13 @@
       "when": 1753447224507,
       "tag": "0001_white_omega_sentinel",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1756752520396,
+      "tag": "0002_supreme_supernaut",
+      "breakpoints": true
     }
   ]
 }

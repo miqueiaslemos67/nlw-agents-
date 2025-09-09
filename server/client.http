@@ -41,9 +41,9 @@ GET {{baseUrl}}/rooms/{{roomId}}/questions
 
 # Create questions
 # @name createQuestion
-POST {{baseUrl}}/rooms/{{roomId}}/questions
+POST {{baseUrl}}/rooms/121fb33e-54f1-4569-8557-d9e26ed6e41d/questions
 Content-Type: application/json
 
 {
-    "question":"Qual o conceito de X dentro de Y?"
+    "question":"Em que ano nasceu a Heaven's Academia?"
 }
